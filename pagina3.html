@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Análisis: Spider-Man 2 - Mi Pagina Web</title>
+  <link rel="icon" type="image/svg+xml" href="images/mando.png">
+  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="logo">
+        <a href="index.html">
+          <img src="images/logo.jpg" alt="Logo" width="150" height="auto">
+        </a>
+    </div>
+    <div class="site-title">Mi Pagina Web</div>
+    <button class="menu-btn" id="menuBtn" aria-label="Abrir menú">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <div class="dropdown" id="dropdown">
+      <img src="images/logo.jpg" alt="Logo" width="120" style="margin: 20px auto 0; display: block; border-radius: 8px;">
+      <div class="dropdown-body">
+        <p class="dropdown-title">Más Análisis</p>
+        <ul class="dropdown-links">
+          <li><a href="index.html">Zelda: Tears of the Kingdom</a></li>
+          <li><a href="pagina2.html" class="active">Super Mario Bros. Wonder</a></li>
+          <li><a href="pagina3.html">Marvel's Spider-Man 2</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main class="main">
+    <article class="content">
+      
+      <div class="hero-image">
+        <!-- Reemplaza con una imagen de Spiderman -->
+        <img src="images/s1.jpg" alt="Spider-Man 2">
+        <div class="hero-overlay">
+          <span class="tag">Análisis</span>
+        </div>
+      </div>
+
+      <h1>Análisis: Marvel's Spider-Man 2</h1>
+      <p class="meta">Por Redacción · 27 de octubre de 2026</p>
+
+      <p>
+        Insomniac Games perfecciona su fórmula. <strong>Marvel's Spider-Man 2</strong> es más grande, más rápido y ofrece una historia mucho más oscura y personal al poner a Peter Parker y Miles Morales frente a amenazas como Kraven y Venom.
+      </p>
+
+      <h2>Recorriendo Nueva York</h2>
+      <p>
+        El desplazamiento siempre fue el punto fuerte, pero con la inclusión de las Alitas de Telaraña (Web Wings) y la potencia de la nueva generación, recorrer la ciudad es un espectáculo absoluto y vertiginoso.
+      </p>
+
+      <div class="inline-image">
+        <!-- Reemplaza con otra imagen de Spiderman -->
+        <img src="images/s2.jpg" alt="Venom en Spider-man">
+        <p class="caption">El traje simbionte aporta un combate brutal y diferente.</p>
+      </div>
+
+      <h2>Conclusión</h2>
+      <p>
+        Una secuela ejemplar que sabe cuándo apostar por el espectáculo cinematográfico y cuándo centrarse en el drama humano de sus protagonistas.
+      </p>
+
+      <div class="score-box">
+        <div class="score-label">Nota final</div>
+        <div class="score-value">
+          <span class="score">9.2</span>
+          <span class="score-max">/ 10</span>
+        </div>
+      </div>
+
+    </article>
+  </main>
+
+  <footer class="bottom-bar">
+    <div class="footer-content">
+      <span class="nombre">© 2026 Hector Josue</span>
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const dropdown = document.getElementById('dropdown');
+
+    menuBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      menuBtn.classList.toggle('active');
+      dropdown.classList.toggle('open');
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!menuBtn.contains(e.target) && !dropdown.contains(e.target)) {
+        menuBtn.classList.remove('active');
+        dropdown.classList.remove('open');
+      }
+    });
+  </script>
+</body>
+</html>

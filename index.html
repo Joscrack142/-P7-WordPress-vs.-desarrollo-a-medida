@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Pagina Web</title>
+  <link rel="icon" type="image/svg+xml" href="images/mando.png">
+  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <!-- HEADER -->
+  <header class="header">
+    <div class="logo">
+        <a href="index.html">
+          <img src="images/logo.jpg" alt="Logo" width="150" height="auto">
+        </a>
+    </div>
+    <div class="site-title">Mi Pagina Web</div>
+    <button class="menu-btn" id="menuBtn" aria-label="Abrir menú">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <!-- VENTANA DESPLEGABLE -->
+    <div class="dropdown" id="dropdown">
+      <img src="images/logo.jpg" alt="Logo" width="120" style="margin: 20px auto 0; display: block; border-radius: 8px;">
+      <div class="dropdown-body">
+        <p class="dropdown-title">Más Análisis</p>
+        <ul class="dropdown-links">
+          <li><a href="index.html" class="active">Zelda: Tears of the Kingdom</a></li>
+          <li><a href="pagina2.html">Super Mario Bros. Wonder</a></li>
+          <li><a href="pagina3.html">Marvel's Spider-Man 2</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main class="main">
+    <article class="content">
+      
+      <!-- Imagen principal -->
+      <div class="hero-image">
+        <img src="images/img.avif" alt="Videojuegos">
+        <div class="hero-overlay">
+          <span class="tag">Análisis</span>
+        </div>
+      </div>
+
+      <h1>Análisis: The Legend of Zelda: Tears of the Kingdom</h1>
+      <p class="meta">Por Redacción · 26 de octubre de 2026</p>
+
+      <p>
+        Nintendo lo ha vuelto a hacer. <strong>The Legend of Zelda: Tears of the Kingdom</strong> no solo consolida todo lo que hizo grande a Breath of the Wild, sino que lo eleva a un nivel que pocos títulos han conseguido alcanzar. Desde el primer momento en el que Link despierta en las Islas Celestes, queda claro que estamos ante una de las experiencias más ambiciosas de la última década.
+      </p>
+
+      <h2>Un mundo que se siente vivo</h2>
+      <p>
+        El reino de Hyrule es ahora más grande, más vertical y mucho más impredecible. La posibilidad de construir vehículos, armas y estructuras con el poder de Ultrahand cambia por completo la forma de explorar. Ya no hay un camino correcto: hay el que tú decides crear.
+      </p>
+
+      <!-- Imagen secundaria -->
+      <div class="inline-image">
+        <img src="images/img2.webp" alt="Mundo abierto">
+        <p class="caption">La libertad de exploración es el gran pilar del juego.</p>
+      </div>
+
+      <h2>Historia y personajes</h2>
+      <p>
+        La narrativa vuelve a ser una de las grandes fortalezas de la saga. El misterio que rodea a las Ruinas Antiguas y al pasado de Hyrule se va desvelando de forma natural. Zelda tiene un papel mucho más activo y emotivo que en entregas anteriores.
+      </p>
+
+      <h2>Apartado técnico y sonido</h2>
+      <p>
+        Visualmente, Tears of the Kingdom prioriza la legibilidad y la belleza del mundo abierto. La banda sonora acompaña a la perfección tanto los momentos épicos como los de pura exploración.
+      </p>
+
+      <h2>Conclusión</h2>
+      <p>
+        Estamos ante un título imprescindible. Si ya disfrutaste de Breath of the Wild, aquí encontrarás todo lo que te gustó y mucho más. Una obra maestra que demuestra que todavía se pueden reinventar los mundos abiertos.
+      </p>
+
+      <div class="score-box">
+        <div class="score-label">Nota final</div>
+        <div class="score-value">
+          <span class="score">9.8</span>
+          <span class="score-max">/ 10</span>
+        </div>
+      </div>
+
+    </article>
+  </main>
+
+  <!-- BARRA INFERIOR -->
+  <footer class="bottom-bar">
+    <div class="footer-content">
+      <span class="nombre">© 2026 Hector Josue</span>
+      <div class="footer-links">
+        <a href="#">Redacción</a>
+        <a href="#">Contactar</a>
+        <a href="#">Publicidad</a>
+        <a href="#">Videos patrocinados</a>
+        <a href="#">Aviso legal</a>
+        <a href="#">Política de cookies</a>
+        <a href="#">Política de privacidad</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const dropdown = document.getElementById('dropdown');
+
+    menuBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      menuBtn.classList.toggle('active');
+      dropdown.classList.toggle('open');
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!menuBtn.contains(e.target) && !dropdown.contains(e.target)) {
+        menuBtn.classList.remove('active');
+        dropdown.classList.remove('open');
+      }
+    });
+  </script>
+</body>
+</html>
